@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HarryNFR's Website</title>
+	<link rel="stylesheet" type="text/css" href="https://harrynfr.xyz/styles/styles.css">
+	<link rel="icon" type="image/x-icon" href="https://harrynfr.xyz/images/favicon.ico">
+</head>
+<body>
+	<h1><a href="https://harrynfr.xyz" style="color: #fe8019; text-decoration: none;">HarryNFR's Website</a></h1>
+	<hr style="color: #b2bec3; margin: 25px auto; max-width: 800px;">
+	<h2><a style="color: #fe8019;">The death of plex (for now)</a></h2>
+	<p style="max-width: 1000px; margin: 0 auto; font-size: 24px;">
+		To give some context, I was previously using a 2TB Western Digital external HDD to store my Linux ISOs.
+		I used Plex alongside that to view them on multiple devices. 
+		However, upon reaching 90% capacity (with 200GB still remaining), the drive froze.
+	</p>
+	<br>
+	<p style="max-width: 1000px; margin: 0 auto; font-size: 24px;">
+		The drive was formatted in EXT4, and I tried multiple times on different machines to use cfdisk to delete the partition, but every time it froze my terminal session. 
+		I then used dd if=/dev/urandom on the drive, formatted it as NTFS, and plugged it into a Windows computer.
+	</p>
+	<br>
+	<p style="max-width: 1000px; margin: 0 auto; font-size: 24px;">
+		I could now access the drive, or so I thought. 
+		Upon creating a folder and attempting to torrent to the drive, nothing was writing. 
+		When I tried to open the folder in File Explorer, it crashed. 
+		At this point, I assumed it was an issue with Windows, so I plugged the drive back into the Raspberry Pi and tried remounting it with no success. 
+		Whenever I tried to mount the drive back to its old folder, it just froze my terminal session again.
+	</p>
+	<br>
+	<p style="max-width: 1000px; margin: 0 auto; font-size: 24px;">
+		After a recommendation from a friend, I installed Stremio with the Torrentio plugin, and I now stream my torrents instead of downloading them. 
+		This works and is currently my replacement for my Plex server. 
+		Whether I buy a new drive or fix my current one, I don't know. 
+		But for now, Stremio works just fine, with the minor exception that the app has less support for iOS devices, meaning I'm not currently able to watch torrents on my phone. 
+		But I rarely used the Plex app on my phone anyway.
+	</p>
+	<br>
+	<p style="max-width: 1000px; margin: 0 auto; font-size: 24px;">
+		Thank you for reading my first, and probably last, blog/rant. Download <a href="https://www.stremio.com">Stremio</a> and <a href="https://torrentio.strem.fun">Torrentio</a> here.
+	</p>
+	<p style="margin: 25px;"><a href="https://harrynfr.xyz/downloads/full.zip" style="color: #8bc34a;">Download this site.</a></p>
+</body>
+</html>
+
+
