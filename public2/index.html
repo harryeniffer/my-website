@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/favicon.ico">
+    <title>HarryNFR.xyz</title>
+	<style>
+		body, html {
+			background-color: black;
+			color: white;
+			font-family: 'Comic Sans MS', sans-serif;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			overflow: hidden;
+			margin: 0;
+			position: relative;
+			width: 100%;
+		}
+        .container {
+            background-color: rgba(0, 0, 0, 0.0);
+            border: 2px solid white;
+            padding: 20px;
+            text-align: left;
+            max-width: 1000px;
+			max-height: 600px;
+            width: 100%; 
+            position: relative;
+            z-index: 1;
+			overflow-y: auto;
+			overflow-x: hidden;
+			backdrop-filter: blur(10px);
+		}
+        nav {			
+			margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            cursor: pointer; 
+        }
+        .content {
+            margin-bottom: 20px;
+        }
+        .button-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button-box a {
+            display: block;
+            width: 88px;
+            height: 31px;
+        }
+        .button-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        .bouncing-image {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 0;
+            left: 0;
+            z-index: 0;
+			animation: spin 5s linear infinite;
+        }
+		@keyframes spin {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
+		.contact-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			gap: 20px;
+		}
+		.contact-container iframe 
+			border: 2px solid white; 
+		}
+		.contact-info {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: left;
+		} 
+	</style>
+</head>
+<body>
+    <div class="container">
+		<nav>
+			<a onclick="showSection('system')">System statistics</a>
+			<a onclick="showSection('visitornetdownload')">Visitors, network and download</a>
+			<a href="https://harrynfr.xyz">Return to main</a>
+		</nav>
+        <div class="content">
+            <section id="system" class="active">
+                <h1>System Statistics</h1>
+				<p>Right now, this page is running on a Raspberry Pi 5 8GB model.</p>
+				<h1>CPU</h1>
+				<p>Clock speed: <span id="cpuClock">Loading...</span><br>
+				   Usage: <span id="cpuUsage">Loading...</span><br>
+				   Temp: <span id="cpuTemp">Loading...</span><br>
+				   Uptime: <span id="systemUptime">Loading...</span>
+				</p>
+				<h1>RAM</h1>
+				<p>Free space: <span id="memFree">Loading...</span><br>
+				   Total space: <span id="memTotal">Loading...</span><br>
+				   Usage: <span id="memUsage">Loading...</span>
+				</p>
+			</section>
+			<section id="visitornetdownload">
+				<h1>Visitors on <a href="https://harrynfr.xyz">https://harrynfr.xyz</a></h1>
+				<p>Previous 24 hours: <span id="dailyVisits">Loading...</span><br>
+				   All time (based on cloudflare): <span id="totalVisits">Loading...</span>
+				</p>
+				<h1>Network</h1>
+				<p>Network out: <span id="networkOut">Loading...</span><br>
+				   Network in: <span id="networkIn">Loading...</span></p>
+                <h1>Download</h1>
+              	<p>Download all pages and backend: <a href="downloads/harrynfr_full.zip">/home/harry/web/</a></p>
+			</section>
+		</div>
+		<div class="button-box">
+            <a href="https://artixlinux.org" target="_blank"><img src="images/artix.gif"></a>
+            <a href="https://www.mozilla.org/firefox/new" target="_blank"><img src="images/firefox.png"></a>
+            <a href="https://duckduckgo.com/?q=gay+men+kissing+or+something&iax=images&ia=images" target="_blank"><img src="images/gay.png"></a>
+            <a><img src="images/cutesocks.gif"></a>
+            <a href="https://logiq.lol" target="_blank"><img src="https://logiq.lol/static/assets/88x31/logiq.png"></a>
+            <a href="https://kernel.org" target="_blank"><img src="images/linux.png"></a>
+            <a href="https://www.sadi.lol" target="_blank"><img src="images/sadi.png"></a>
+            <a href="https://lukron.xyz" target="_blank"><img src="https://lukron.xyz/badge1.png"></a>
+			<a href="https://vault.bitwarden.com" target="_blank"><img src="images/bitwarden.png"></a>
+            <a href="https://en.wikipedia.org/wiki/Aromanticism" target="_blank"><img src="images/aromantic.png"></a>
+            <a href="https://harrynfr.xyz" target="_blank"><img src="images/me.gif"></a>
+			<a href="https://youtu.be/MShbP3OpASA?si=henM12HmrS16Bvs5&t=2992" target="_blank"><img src="images/linustorvalds.gif"></a>
+            <a href="https://ublockorigin.com" target="_blank"><img src="images/ublockorigin.png"></a>
+			<a href="https://www.ikea.com/us/en/p/blahaj-soft-toy-shark-90373590" target="_blank"><img src="images/blahaj.gif"></a>
+			<a href="https://notepad-plus-plus.org" target="_blank"><img src="images/notepadpp.png"></a>
+			<a href="https://5rcher.dev" target="_blank"><img src="https://raw.githubusercontent.com/5rcher/website/main/badge/badge.gif"></a>
+			<a href="https://larbs.xyz" target="_blank"><img src="images/larbs.gif"></a>
+			<a href="https://lily.pet" target="_blank"><img src="https://lily.pet/assets/badges/friends/lily_pet.gif"></a>
+        </div>
+    </div>
+    <img src="images/tux100x100.png" class="bouncing-image" id="bouncingImage">
+	<script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+            history.pushState(null, '', '/');
+        }
+		const img = document.getElementById('bouncingImage');
+		const imgWidth = 100, imgHeight = 100;
+		let posX = Math.random() * (window.innerWidth - imgWidth);
+		let posY = Math.random() * (window.innerHeight - imgHeight);
+		let velX = 3.5, velY = 3.5;
+		let lastTime = performance.now();
+		function updatePosition(currentTime) {
+			const deltaTime = (currentTime - lastTime) / 1000; 
+			lastTime = currentTime;
+			const containerWidth = window.innerWidth;
+			const containerHeight = window.innerHeight;
+			posX += velX * deltaTime * 60; 
+			posY += velY * deltaTime * 60;
+			if (posX + imgWidth > containerWidth) {
+				posX = containerWidth - imgWidth;
+				velX = -velX;
+			} else if (posX < 0) {
+				posX = 0;
+				velX = -velX;
+			}
+			if (posY + imgHeight > containerHeight) {
+				posY = containerHeight - imgHeight;
+				velY = -velY;
+			} else if (posY < 0) {
+				posY = 0;
+				velY = -velY;
+			}
+			img.style.left = posX + 'px';
+			img.style.top = posY + 'px';
+			requestAnimationFrame(updatePosition);
+		}
+		requestAnimationFrame(updatePosition);
+
+		async function updateSystemStats() {
+			try {
+				const response = await fetch('/system-stats');
+				const data = await response.json();
+				document.getElementById('cpuClock').textContent = data.cpuClock.toFixed(2) + ' GHz';
+				document.getElementById('cpuUsage').textContent = data.cpuUsage.toFixed(2) + '%';
+				document.getElementById('cpuTemp').textContent = data.cpuTemp.toFixed(2) + ' °C';
+				document.getElementById('systemUptime').textContent = formatSystemUptime(data.systemUptime);
+				document.getElementById('memFree').textContent = data.memFree.toFixed(2) + ' MiB';
+				document.getElementById('memTotal').textContent = data.memTotal.toFixed(2) + ' MiB';
+				document.getElementById('memUsage').textContent = data.memUsage.toFixed(2) + '%';
+				document.getElementById('networkOut').textContent = data.networkOut.toFixed(2) + ' B/s';
+				document.getElementById('networkIn').textContent = data.networkIn.toFixed(2) + ' B/s';
+			} catch (error) {
+				console.error('Error fetching system statistics:', error);
+			}
+		}
+
+		async function updateVisitorsCount() {
+			try {
+				const response = await fetch('/visit-counts');
+				const data = await response.json();
+				document.getElementById('dailyVisits').textContent = data.dailyVisits;
+				document.getElementById('totalVisits').textContent = data.totalVisits;
+			} catch (error) {
+				console.error('Error fetching visitors count:', error);
+			}
+		}
+
+		function formatSystemUptime(seconds) {
+			const days = Math.floor(seconds / (3600 * 24));
+			const hours = Math.floor((seconds % (3600 * 24)) / 3600);
+			const minutes = Math.floor((seconds % 3600) / 60);
+			const secondsLeft = Math.floor(seconds % 60);
+			return `${days}d ${hours}h ${minutes}m ${secondsLeft}s`;
+		}
+
+		setInterval(updateSystemStats, 1000);
+
+		updateSystemStats();
+		updateVisitorsCount();
+	</script>
+</body>
+</html>

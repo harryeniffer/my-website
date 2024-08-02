@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">  <!-- if you wish to download this site, head to https://stats.harrynfr.xyz/ to grab the backend too. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico">
+    <title>HarryNFR.xyz</title>
+	<style>
+		body, html {
+			background-color: black;
+			color: white;
+			font-family: 'Comic Sans MS', sans-serif;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			overflow: hidden;
+			margin: 0;
+			position: relative;
+			width: 100%;
+		}
+        .container {
+            background-color: rgba(0, 0, 0, 0.0);
+            border: 2px solid white;
+            padding: 20px;
+            text-align: left;
+            max-width: 1000px;
+			max-height: 600px;
+            width: 100%; 
+            position: relative;
+            z-index: 1;
+			overflow-y: auto;
+			overflow-x: hidden;
+			backdrop-filter: blur(10px);
+		}
+        nav {			
+			margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            cursor: pointer; 
+        }
+        .content {
+            margin-bottom: 20px;
+        }
+        .button-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button-box a {
+            display: block;
+            width: 88px;
+            height: 31px;
+        }
+        .button-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        .bouncing-image {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 0;
+            left: 0;
+            z-index: 0;
+			animation: spin 5s linear infinite;
+        }
+		@keyframes spin {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
+		.contact-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			gap: 20px;
+		}
+		.contact-container iframe 
+			border: 2px solid white; 
+		}
+		.contact-info {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: left;
+		} 
+	</style>
+</head>
+<body>
+    <div class="container">
+		<nav>
+			<a onclick="showSection('home')">Home</a>
+			<a onclick="showSection('linux')">My linux stuff</a>
+			<a onclick="showSection('hardware')">My hardware</a>
+			<a onclick="showSection('contact')">Contact</a>
+			<a onclick="showSection('updates')">Updates/Blog</a>
+		</nav>
+        <div class="content">
+            <section id="home" class="active">
+				<h1>Welcome to My Website</h1>
+				<p>This website is mainly about the hardware I use and how it occasionally breaks. Unlike most people today, I don't like broadcasting every aspect of my life on the internet for everyone to see. So, this website might be a little boring. I made this website myself, but I do not consider myself a developer. This website uses lots of JavaScript, and I do feel guilty forcing this upon users although, soon I hope to redesign this website and make it a lot easier to view. I'm currently in college studying computer science. That's about all I'm going to say, so enjoy the rest of my awesome website.</p>
+                <p>See system statistics <a href="https://stats.harrynfr.xyz">here</a>.</p> 
+			</section>
+            <section id="linux">
+                <h1>My Linux Setup</h1>
+				<p>I use Arch Linux (technically Artix). I initially installed it after seeing memes about so-called Linux elitists who believe they are superior to others because they use a "harder to install" Linux distribution. In reality, the truly superior ones are those who don't have to spend half an hour installing their operating system. Anyway, I still drive Arch Linux because I like the DIY approach. It's also very lightweight, so it runs on practically anything.</p>
+				<p>To fit the #FOSS #butistillusediscord theme, I went with DWM as my window manager. All jokes aside, I think using DWM is one of the best experiences I have had when it comes to desktop environments/window managers on Linux. It's very lightweight yet extremely customizable, thanks to <a href="https://dwm.suckless.org/patches/">https://dwm.suckless.org/patches/</a>, where users can submit addons to provide further functionality to the software. There are no config files, so you edit the source code directly. Yet even I, a big idiot who wouldn't consider themselves a developer in a million years, still managed to pick it up and start customizing the environment within minutes.</p>
+				<p>As for my configurations, I use picom and transparent terminals to fit in with the Unixporn community, custom color themes to fit in with the Unixporn community, useless gaps to fit in with the Unixporn community, and so on. My config only aims to make the environment look nicer, and I have applied little to no extra functionality whatsoever. I also use feh to randomize my wallpaper every few minutes. I stole a big repository of nature wallpapers off GitHub, and that worked for me. Sadly, I have no idea where I got that repository from.</p>
+				</section>
+			<section id="hardware">
+				<h1>My Hardware</h1>
+				<p>My desktop is very powerful, and I do not use it to anywhere near its full potential. I have an AMD Ryzen 5 5600G paired with an AMD RX 6800 XT (16GB). As you can imagine, Arch + DWM doesn't really use my GPU all that much. But I do occasionally use Windows 10 for gaming.</p>
+				<p>I don't use my laptops for their intended purposes. I have a ThinkPad X61T (my beloved), which is currently a server under my bed. I also have a ThinkPad T560 serving the same function. Sure, I could probably use them like any other normal person (as normal as you can be running Arch Linux), but my college campus already has computers, so I just use those.</p>
+				<p>This server is currently running on a Raspberry Pi 5 8GB model. Unlike my laptops and my desktop, I am certainly getting my money's worth out of this thing. It's running qBittorrent (for Linux ISOs, obviously), Pi-hole, a web file manager, Plex Media Server (for viewing said Linux ISOs), OpenMediaVault, and it's also a NAS. It also has an active cooler, so it doesn't overheat while my desktop melts my floor.</p>
+			</section>
+			<section id="contact">
+				<h1>Contact Me</h1>
+                <p>Email: <a href="mailto:harrynfr@mailfence.com">harrynfr@mailfence.com</a><br>Discord: <a href="https://discord.com/users/510362447060664321">harrynfr</a><br>Mastodon: <a href="https://tech.lgbt/@harrynfr">@harrynfr@tech.lgbt</a></p>
+            </section>
+			<section id="updates">
+				<h1>Updates/Blog</h1>
+				<p>These are in order from oldest to newest. I'm not sure why but it would feel weird if they were the other way around.</p>
+				<h1>The death of plex (for now). 15/6/2024</h1>
+				<p>To give some context, I was previously using a 2TB Western Digital external HDD to store my Linux ISOs. I used Plex alongside that to view them on multiple devices. However, upon reaching 90% capacity (with 200GB still remaining), the drive froze.</p>
+				<p>The drive was formatted in EXT4, and I tried multiple times on different machines to use cfdisk to delete the partition, but every time it froze my terminal session. I then used dd if=/dev/urandom on the drive, formatted it as NTFS, and plugged it into a Windows computer.</p>
+				<p>I could now access the drive, or so I thought. Upon creating a folder and attempting to torrent to the drive, nothing was writing. When I tried to open the folder in File Explorer, it crashed. At this point, I assumed it was an issue with Windows, so I plugged the drive back into the Raspberry Pi and tried remounting it with no success. Whenever I tried to mount the drive back to its old folder, it just froze my terminal session again.</p>
+				<p>After a recommendation from a friend, I installed Stremio with the Torrentio plugin, and I now stream my torrents instead of downloading them. This works and is currently my replacement for my Plex server. Whether I buy a new drive or fix my current one, I don't know. But for now, Stremio works just fine, with the minor exception that the app has less support for iOS devices, meaning I'm not currently able to watch torrents on my phone. But I rarely used the Plex app on my phone anyway.</p>
+				<p>Thank you for reading my first, and probably last, blog/rant. Download <a href="https://www.stremio.com/">Stremio</a> and <a href="https://torrentio.strem.fun/configure">Torrentio</a> here.</p>
+				<h1>The.Sopranos.S01.1080p.BluRay.x265-RARBG. 16/6/2024</h1>
+				<p>Welcome back to part two of the faulty external HDD adventures. I am confused. The Sopranos is breaking my drive. Last night, shortly after posting my last rant, the drive fixed itself randomly. "Great," I thought to myself, "I can go back to hoarding Linux ISOs." But no.</p>
+				<p>Last night the drive became writable again. I created an NTFS partition on it and began to torrent again. I installed Jellyfin as I had somehow managed to convince myself that Plex was the issue. I torrented a few Linux ISOs, and everything seemed fine. I could view them on multiple devices, locally and remotely. However, I got greedy. For context, the last time my drive decided to break itself, it was while I was torrenting The Sopranos (.iso). Until today, I thought the two were unrelated. That was until I tried again, and to my surprise, the drive completely seized up and is no longer writable. This is no coincidence. The Sopranos is breaking my drive.</p>
+				<p>My plan now is to leave it plugged into my Raspberry Pi and hope it randomly remounts itself and fixes like it did last time. And if this does happen, I will just have to watch The Sopranos elsewhere. Of course, I could've done this anyway, but I am a bit of an idiot. Anyway, I hope you enjoyed another epic update/rant, and I'll be sure to keep you updated when my drive eventually gains sentience and runs away.</p>
+				<h1>Do NOT torrent The Sopranos onto Western Digital Part#: WDBYVG0020BRD-WESN. 18/6/2024</h1>
+				<p>Nothing really new here. The drive fixed itself, and I tried a third time just to confirm. The Sopranos (.iso) is now 100% the reason.</p>
+				<p>What I discovered, however, was that it doesn't matter where the torrent comes from. If it's The Sopranos, it will break the drive. I have torrented The Sopranos from three separate sources now, all in different qualities and file types, and without fail, it freezes the drive.</p>
+				<p>Again, it's not like my drive is broken. Because before I try to torrent The Sopranos, I make sure to torrent other files first and test them. These other files always work, but when I try to torrent The Sopranos, it breaks.</p>
+				<p>Anyway, that's the update. Nothing new, just wanted to triple confirm that it's The Sopranos which is the issue. So if you have a Western Digital Part#: WDBYVG0020BRD-WESN, don't download The Sopranos on it. Or, if you do and it works, please tell me how.</p>
+				<h1>Defeat. 20/6/2024</h1>
+				<p>Welcome to the fourth, and final, part of the faulty external HDD adventures. Yesterday, I torrented The Sopranos directly onto my desktop. This worked, and playback was seamless. I then tried transferring the files to the external HDD, which at this point was plugged into my desktop. All was going well until around 30%.</p>
+				<p>Transfer speeds dropped to around 300KB/s, and File Explorer crashed. For context, I had convinced myself Linux was the issue, so I resorted to fixing this issue in Windows. In a panic, I attempted to eject the drive, to no success. I then shut down my computer, only for it to freeze. I waited 10 minutes and eventually decided to unplug the external HDD, and my computer immediately unfroze and shut down properly.</p>
+				<p>After rebooting, I plugged the drive back in, then it started clicking. It is now refusing to cooperate with any of my machines, whether it be Linux or Windows. In Windows, when I do plug the drive in, all my applications freeze and only fix themselves once I unplug the drive.</p>
+				<p>So, after everything, this is it. The Sopranos has won, and my drive is now dead. What I find funny about this is that at any point, even after having confirmed for a third time that The Sopranos was the reason, I could have just streamed it. But I didn't. And not because I wanted to have a copy of The Sopranos, but purely because I wanted to win. This issue is so bizarre, I couldn't not attempt to investigate and fix it. Anyway, the drive is dead now. Whether I fix the drive or stream The Sopranos like I should have done in the beginning is a story for another potential faulty HDD adventures.</p>
+			</section>
+        </div>
+		<div class="button-box">
+            <a href="https://artixlinux.org" target="_blank"><img src="images/artix.gif"></a>
+            <a href="https://www.mozilla.org/firefox/new" target="_blank"><img src="images/firefox.png"></a>
+            <a href="https://duckduckgo.com/?q=gay+men+kissing+or+something&iax=images&ia=images" target="_blank"><img src="images/gay.png"></a>
+            <a><img src="images/cutesocks.gif"></a>
+            <a href="https://logiq.lol" target="_blank"><img src="https://logiq.lol/static/assets/88x31/logiq.png"></a>
+            <a href="https://kernel.org" target="_blank"><img src="images/linux.png"></a>
+            <a href="https://www.sadi.lol" target="_blank"><img src="images/sadi.png"></a>
+            <a href="https://lukron.xyz" target="_blank"><img src="https://lukron.xyz/badge1.png"></a>
+			<a href="https://vault.bitwarden.com" target="_blank"><img src="images/bitwarden.png"></a>
+            <a href="https://en.wikipedia.org/wiki/Aromanticism" target="_blank"><img src="images/aromantic.png"></a>
+            <a href="https://harrynfr.xyz" target="_blank"><img src="images/me.gif"></a>
+			<a href="https://youtu.be/MShbP3OpASA?si=henM12HmrS16Bvs5&t=2992" target="_blank"><img src="images/linustorvalds.gif"></a>
+            <a href="https://ublockorigin.com" target="_blank"><img src="images/ublockorigin.png"></a>
+			<a href="https://www.ikea.com/us/en/p/blahaj-soft-toy-shark-90373590" target="_blank"><img src="images/blahaj.gif"></a>
+			<a href="https://notepad-plus-plus.org" target="_blank"><img src="images/notepadpp.png"></a>
+			<a href="https://5rcher.dev" target="_blank"><img src="https://raw.githubusercontent.com/5rcher/website/main/badge/badge.gif"></a>
+			<a href="https://larbs.xyz" target="_blank"><img src="images/larbs.gif"></a>
+			<a href="https://lily.pet" target="_blank"><img src="https://lily.pet/assets/badges/friends/lily_pet.gif"></a>
+        </div>
+    </div>
+    <img src="images/tux100x100.png" class="bouncing-image" id="bouncingImage">
+	<script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+            history.pushState(null, '', '/');
+        }
+		const img = document.getElementById('bouncingImage');
+		const imgWidth = 100, imgHeight = 100;
+		let posX = Math.random() * (window.innerWidth - imgWidth);
+		let posY = Math.random() * (window.innerHeight - imgHeight);
+		let velX = 3.5, velY = 3.5;
+		let lastTime = performance.now();
+		function updatePosition(currentTime) {
+			const deltaTime = (currentTime - lastTime) / 1000; 
+			lastTime = currentTime;
+			const containerWidth = window.innerWidth;
+			const containerHeight = window.innerHeight;
+			posX += velX * deltaTime * 60; 
+			posY += velY * deltaTime * 60;
+			if (posX + imgWidth > containerWidth) {
+				posX = containerWidth - imgWidth;
+				velX = -velX;
+			} else if (posX < 0) {
+				posX = 0;
+				velX = -velX;
+			}
+			if (posY + imgHeight > containerHeight) {
+				posY = containerHeight - imgHeight;
+				velY = -velY;
+			} else if (posY < 0) {
+				posY = 0;
+				velY = -velY;
+			}
+			img.style.left = posX + 'px';
+			img.style.top = posY + 'px';
+			requestAnimationFrame(updatePosition);
+		}
+		requestAnimationFrame(updatePosition);
+	</script>
+</body>
+</html>
