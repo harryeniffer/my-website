@@ -1,1 +1,1 @@
-this is my awesome website. i used to have a much better looking one, but im pretty sure that website used more javascript than actual html.
+this is my awesome website. im pretty sure it used more javascript that html. it also logs and stores ips, not sure if thats legal or not.
